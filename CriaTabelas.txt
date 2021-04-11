@@ -1,0 +1,31 @@
+CREATE TABLE VENDEDORES
+	(CDVEND varchar(36),
+     DSNOME varchar(50) NOT NULL,
+     CDTAB integer NOT NULL,
+     DTNASC date,
+     PRIMARY KEY (CDVEND));
+     
+CREATE TABLE CLIENTES
+	(CDCL varchar(36) DEFAULT uuid(),
+     DSNOME varchar(50) NOT NULL,
+     IDTIPO char(2) NOT NULL,
+     CDVEND varchar(36),
+     DSLIM decimal(15,2),
+     PRIMARY KEY (CDCL),
+     FOREIGN KEY (CDVEND) REFERENCES VENDEDORES(CDVEND));
+
+DELIMITER ;;
+CREATE TRIGGER `Vendedor_before_insert` 
+BEFORE INSERT ON `VENDEDORES` FOR EACH ROW 
+BEGIN
+    SET new.CDVEND = uuid();
+END;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE TRIGGER `Cliente_before_insert` 
+BEFORE INSERT ON `CLIENTES` FOR EACH ROW 
+BEGIN
+    SET new.CDCL = uuid();
+END;;
+DELIMITER ;
