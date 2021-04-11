@@ -56,7 +56,7 @@
 			<div class="col-xs-4">
 				<h2>Vendedor</h2>	
 					<a href="CadastroVendedor.php"><button type="button" class="btn btn-primary">Novo vendedor</button></a>
-					<button type="button" class="btn btn-primary" disabled id="EditVendedor">Editar vendedor</button>
+					<a href="AtualizaVendedor.php"><button type="button" class="btn btn-primary" id="EditVendedor">Editar vendedor</button></a>
 					<div class="table-responsible">	
 						<table class="table table-hover">
 							<thead>
@@ -95,7 +95,7 @@
 				<h2>Clientes</h2>	
 					<button type="button" class="btn btn-primary" action="divtudo.display = 'inline'">Mostrar todos</button>
 					<a href="CadastroClientes.php"><button type="button" class="btn btn-primary">Novo cliente</button></a>
-					<button type="button" class="btn btn-primary" disabled>Editar cliente</button>
+					<a href="AtualizaCliente.php"><button type="button" class="btn btn-primary">Editar cliente</button></a>
 					<div class="table-responsible" display="none" name="divtudo">	
 						<table class="table table-hover" id="tabelatoda">
 							<thead>

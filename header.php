@@ -6,6 +6,7 @@
 					<center>
 						<a href="home.php"><h1 class="title align-top">LANDIX</h1></a><br>
 					</center>
+					<a href="home.php"><font size="20"><i class="fa fa-home"></i></font></a>
 				</div>
 			</div>
 			</div>
